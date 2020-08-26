@@ -16,7 +16,7 @@ Run the following command (replace `{project-root-folder}` with yours):
 
 ```bash
 cd {project-root-folder}
-wget  -O .git/hooks/pre-push
+wget https://raw.githubusercontent.com/kz-sher/git-pre-push-prompt/master/git-pre-push-prompt -O .git/hooks/pre-push
 chmod a+x .git/hooks/pre-push
 ```
 
