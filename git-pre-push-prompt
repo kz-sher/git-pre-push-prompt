@@ -4,13 +4,13 @@ GREEN="\033[0;32m"
 YELLOW="\033[0;33m"
 NC="\033[0m"
 
-current_branch=\$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-if [[ \$current_branch =~ ^(master|test|release|uat)$ ]]
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+if [[ $current_branch =~ ^(master|test|release|uat)$ ]]
 then
-	line="You're about to push \${YELLOW}\$current_branch\${NC}, is that what you intended? [\${GREEN}y\${NC}|\${RED}n\${NC}]: "
-    read -p "\$(echo -e  \$line)" -n 1 -r < /dev/tty
+	line="You're about to push ${YELLOW}$current_branch${NC}, is that what you intended? [${GREEN}y${NC}|${RED}n${NC}]: "
+    read -p "$(echo -e  $line)" -n 1 -r < /dev/tty
     echo
-    if echo \$REPLY | grep -E '^[Yy]$' > /dev/null
+    if echo $REPLY | grep -E '^[Yy]$' > /dev/null
     then
         exit 0 # push will execute
     fi
