@@ -2,15 +2,11 @@
 
 This snippet will help prompt the user when pushing staged changes onto the protected branches
 
-
-
-## Demo
+# Demo
 
 ![demo](./git-pre-push-prompt.gif)
 
-
-
-## Installation & Setup
+# Installation & Setup
 
 Run the following command (replace `{project-root-folder}` with yours):
 
@@ -20,8 +16,6 @@ wget https://raw.githubusercontent.com/kz-sher/git-pre-push-prompt/master/git-pr
 chmod a+x .git/hooks/pre-push
 ```
 
-
-
-## Got Question?
+# Got Question?
 
 > kzsherdev@gmail.com
